@@ -1,0 +1,6 @@
+implement Csv.read()
+
+change Value class to inherit from a base class with base methods, such as __autoadd__ etc.
+
+enable enumeration of Value
+
