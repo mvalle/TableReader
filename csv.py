@@ -21,22 +21,21 @@ class Csv:
         return name
 
     def _generateValueClass(self, headers):
+        class ValueBase(object):
+            def __autoadd__(self, data_line):    
+                for (i, datum) in enumerate(data_line.split(',')):
+                    setattr(self, self.__attributemap__[i], datum)
+
+
         attributes = {}
         attribute_map = {}
-
         attributes["__attributemap__"] = attribute_map
-        def auto_add(self, data_line):    
-            for (i, datum) in enumerate(data_line.split(',')):
-                setattr(self, self.__attributemap__[i], datum)
-
-
-        attributes["__autoadd__"] = auto_add
-
+        
         for (i, header) in enumerate(headers):
             header = self._checkHeaderName(header, attribute_map)
             attributes[header] = ""
             attribute_map[i] = header
 
-        return type("Value", (), attributes)
+        return type("Value", (ValueBase,), attributes)
     
 
