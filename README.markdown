@@ -6,12 +6,15 @@ It enables the user to process the CSV by the name of the column.
 Example
 --------------------
 example.csv
+
 ```
 Name, URL
 GitHub, www.github.com
 SourceForge, www.sourceforge.com
 ```
-example
+
+example.py
+
 ```python
 from csv import Csv
 csv = Csv("path_to_file/websites.csv")
@@ -20,4 +23,5 @@ for row in csv.read():
     name = row.Name
     url = row.URL
 ```
+
 
