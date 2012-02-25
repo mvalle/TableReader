@@ -1,7 +1,6 @@
 import re
 
 class Csv:
-    values = []
     def __init__(self, file_name):
         self.open_file = open(file_name)
         headers = self.open_file.readline().split(',')
@@ -16,6 +15,7 @@ class Csv:
             v = self.Value()
             v.__autoadd__(line)
             yield v
+        self.open_file.close()
 
     def _sanitize(self, name, allocated_names):
         name = name.strip().replace(" ", "_")
