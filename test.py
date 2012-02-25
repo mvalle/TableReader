@@ -1,4 +1,5 @@
 from csv import Csv
 
 csv = Csv("test.csv")
-csv.read()
+for i in csv.read():
+    print i

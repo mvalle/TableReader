@@ -1,4 +1,5 @@
 class Csv:
+    values = []
     def __init__(self, file_name):
         self.open_file = open(file_name)
         headers = self.open_file.readline().split(',')
@@ -6,13 +7,14 @@ class Csv:
         self.Value = self._generateValueClass(headers)
     
     def read(self):
-        data_line = self.open_file.readline()
+        """Generator that reads a line from the file, and returns a Value class. """
+        for line in self.open_file.readline():
+            if not line:
+                break
 
-        data = data_line.split(',')
-        print dir(self.Value)
-        v = self.Value()
-        v.__autoadd__(data_line)
-        print v.E_mail
+            v = self.Value()
+            v.__autoadd__(line.split(',')
+            yield v
 
     def _checkHeaderName(self, name, allocated_names):
         name = name.strip().replace(" ", "_")
