@@ -8,12 +8,11 @@ class Csv:
     
     def read(self):
         """Generator that reads a line from the file, and returns a Value class. """
-        for line in self.open_file.readline():
+        for line in self.open_file:
             if not line:
                 break
-
             v = self.Value()
-            v.__autoadd__(line.split(',')
+            v.__autoadd__(line)
             yield v
 
     def _checkHeaderName(self, name, allocated_names):
