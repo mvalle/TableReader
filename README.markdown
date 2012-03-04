@@ -1,4 +1,4 @@
-PyCSV: A simple Pythonic CSV library
+SimpleCSV: A simple Pythonic CSV library
 ====================================
 
 It enables the user to process the CSV by the name of the column.
