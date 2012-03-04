@@ -24,4 +24,11 @@ for row in csv.read():
     url = row.URL
 ```
 
+Naming
+------
+Headers in CSV files can be anything, as long it does not have a comma.
+SimpleCSV tries to convert headers that are not valid Python.
+* Spaces are converted into underlines, "First Name" => "First_Name"
+* Numbers as the first character are prefixed with undersocres, "1st Name" => "_1st_Name"
+
 
