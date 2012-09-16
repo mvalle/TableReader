@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 import unittest
 
-from reader.csv import Csv
+from reader import Csv
 from base_test import BaseReaderTest
 
 class TestCsvFunctions(unittest.TestCase, BaseReaderTest):
