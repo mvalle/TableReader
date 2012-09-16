@@ -13,7 +13,7 @@ class Xls(Reader):
         else: #string
             self.worksheet = self.work_book.sheet_by_name(sheet)
 
-        self.Value = self._generateValueClass([c.value for c in self.worksheet.row(0)])
+        self.Value = self.generate_value_class([c.value for c in self.worksheet.row(0)])
     
     def read(self):
         def _excel_valer(cell):

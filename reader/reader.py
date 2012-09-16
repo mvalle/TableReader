@@ -1,11 +1,11 @@
 import re
 
 class Reader:
-    def initValue():
-        self.Value = self._generateValueClass(headers)
+    def init_value():
+        self.Value = self.generate_value_class(headers)
 
 
-    def _sanitize(self, name, allocated_names):
+    def sanitize(self, name, allocated_names):
         name = name.strip().replace(" ", "_")
         if allocated_names.has_key(name):
             raise NameError("%s is already defined" % name)
@@ -15,7 +15,7 @@ class Reader:
             print "Warning! Empty header in file"
         return name
 
-    def _generateValueClass(self, headers):
+    def generate_value_class(self, headers):
 
         class ValueBase(object):
             def __autoadd__(self, data_line, enumer = lambda x:x, valer = lambda x:x.decode('utf-8')):    
@@ -27,7 +27,7 @@ class Reader:
         attributes["__attributemap__"] = attribute_map
         
         for (i, header) in enumerate(headers):
-            header = self._sanitize(header, attribute_map)
+            header = self.sanitize(header, attribute_map)
             attributes[header] = ""
             attribute_map[i] = header
 

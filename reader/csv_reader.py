@@ -7,7 +7,7 @@ class Csv(Reader):
         self.csv_object = csv.reader(self.open_file)
         headers = self.csv_object.next()
 
-        self.Value = self._generateValueClass(headers)
+        self.Value = self.generate_value_class(headers)
     
     def read(self):
         """Generator that reads a line from the file, and returns a Value class. """
