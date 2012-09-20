@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 import unittest
 
-from reader import Xls
+from tablereader import Xls
 from base_test import BaseReaderTest
 
 class TestXlsFunctions(unittest.TestCase, BaseReaderTest):
