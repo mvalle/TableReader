@@ -30,15 +30,15 @@ Allow the user to read data without lots of boilerplate code.
 
 Supported Formats
 -----------------
-Reading CSV files
-Reading Xls files
+* Reading CSV files
+* Reading Xls files
 
 Planned Formats
 ---------------
-Reading Xlsx files
-Reading Ods files
-Reading SQL databases
-Reading HTML files with <table> tags.
+* Reading Xlsx files
+* Reading Ods files
+* Reading SQL databases
+* Reading HTML files with <table> tags.
 
 
 
