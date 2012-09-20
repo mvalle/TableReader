@@ -16,7 +16,7 @@ SourceForge, http://www.sourceforge.com/
 example.py
 
 ```python
-from reader import Csv
+from tablereader import Csv
 csv_file = Csv("path/to/file/websites.csv")
 for row in csv_file.read():
     # process the file.
