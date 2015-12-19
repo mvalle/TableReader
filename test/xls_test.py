@@ -7,7 +7,7 @@ from base_test import BaseReaderTest
 class TestXlsFunctions(unittest.TestCase, BaseReaderTest):
 
     def setUp(self):
-        self.data = Xls("data/nobel.xls")
+        self.data = Xls("test/data/nobel.xls")
         i = self.data.read()
         self.r1 = i.next()
         self.r2 = i.next()

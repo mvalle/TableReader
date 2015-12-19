@@ -7,7 +7,7 @@ from base_test import BaseReaderTest
 class TestCsvFunctions(unittest.TestCase, BaseReaderTest):
 
     def setUp(self):
-        self.data = Csv("data/nobel.csv")
+        self.data = Csv("test/data/nobel.csv")
 
         i = self.data.read()
         self.r1 = i.next()
