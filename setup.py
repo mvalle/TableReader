@@ -4,13 +4,10 @@ except ImportError:
     from distutils.core import setup
 
 config = {
-    'description': 'Table reader lib',
-    'author': 'Table Reader',
-    'url': 'example.com',
-    'download_url': 'example.com',
-    'author_email': 'email@example.com',
+    'description': 'TableReader is a library to write quick scripts to read data in a tabular format',
+    'author': 'mvalle',
     'version': '0.1',
-    'install_requires': [],
+    'install_requires': ['xlrd'],
     'packages': ['tablereader'],
     'scripts':[],
     'name': 'tablereader'
