@@ -4,10 +4,10 @@ import unittest
 from tablereader import Excel
 from base_test import BaseReaderTest
 
-class TestXlsFunctions(unittest.TestCase, BaseReaderTest):
+class TestXlsxFunctions(unittest.TestCase, BaseReaderTest):
 
     def setUp(self):
-        self.data = Excel("test/data/nobel.xls")
+        self.data = Excel("test/data/nobel.xlsx")
         i = self.data.read()
         self.r1 = i.next()
         self.r2 = i.next()

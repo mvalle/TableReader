@@ -1,0 +1,6 @@
+0.2
+	- XLSX support as part of xlrd v. 0.8.0
+0.1 
+	- CSV support
+	- XLS support
+

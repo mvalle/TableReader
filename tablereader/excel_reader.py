@@ -1,7 +1,7 @@
 from reader import Reader
 from xlrd import open_workbook
 
-class Xls(Reader):
+class Excel(Reader):
     def __init__(self, file_name, sheet=None):
         self.work_book = open_workbook(file_name)
         self.worksheet = None

@@ -1,3 +1,3 @@
 from csv_reader import Csv
-from xls_reader import Xls
+from excel_reader import Excel
 

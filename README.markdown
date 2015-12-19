@@ -32,10 +32,10 @@ Supported Formats
 -----------------
 * Reading CSV files
 * Reading Xls files
+* Reading Xlsx files
 
 Planned Formats
 ---------------
-* Reading Xlsx files
 * Reading Ods files
 * Reading SQL databases
 * Reading HTML files with <table> tags.
