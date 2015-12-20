@@ -33,17 +33,17 @@ Supported Formats
 * Reading CSV files
 * Reading Xls files
 * Reading Xlsx files
+* Reading Ods files
 
 Planned Formats
 ---------------
-* Reading Ods files
 * Reading SQL databases
 * Reading HTML files with <table> tags.
 
 
-
 Naming
 ------
+
 Headers in data sources can be anything, as long as it is a valid Python identifier.
 Table Reader tries to convert invalid header names, into valid names.
 
